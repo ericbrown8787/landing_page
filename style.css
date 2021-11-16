@@ -1,8 +1,9 @@
 /* Global */
 *{
     /* outline:1px solid red; */
-    font-family:sans-serif;
+    font-family:"Roboto",sans-serif;
 }
+
 body{
     background-color: white;
     margin:0;
@@ -121,7 +122,7 @@ header ul li{
 .quote{
     font-size:36px;
     font-style:italic;
-    font-weight: 200;
+    font-weight: 100;
     color:#1f2937;
 }
 
