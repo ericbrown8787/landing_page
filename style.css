@@ -1,11 +1,9 @@
+/* Global */
 *{
-    outline:1px solid red;
+    /* outline:1px solid red; */
     font-family:sans-serif;
 }
 body{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
     background-color: white;
     margin:0;
     padding:0;
@@ -21,47 +19,42 @@ button{
     margin:10px 0;
 }
 
-header,nav,.hero,.information,.testimonials,.call-to-action,footer{
-padding:0 10rem;
-}
+/* Header */
 
-section{
-    display:flex;
-}
-
-header,footer{
+header,section,footer{
     background-color: #1f2937;
+}
+
+header{
+    color:#f9faf8;
+    display:flex;
+    justify-content: space-between;
     width:100%;
 }
 
-nav{
-    color:whitesmoke;
-    display:flex;
-    justify-content:space-between;
-    margin:0;
-}
-
-
-nav h1{
-    font-size: 24px;
-    color:f9faf8;
-}
-
-nav ul{
-    display:flex;
+header ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     list-style: none;
+    padding:0;
+    margin-right:7rem;
 }
 
-nav ul li{
+header h1{
+    font-size: 24px;
+    margin-left:7rem;
+}
+
+header ul li{
     padding:10px;
 }
-.hero{
-    background-color: #1f2937;
-    margin-top:5rem;
-}
 
-.hero-text,.hero-image{
-    width:50%;
+/* Hero */
+.hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #1f2937;
+    padding:5rem 7rem;
 }
 
 .hero-text{
@@ -77,20 +70,25 @@ nav ul li{
     margin:0;
 }
 
-.hero-secondary-text{
-    width:100%;
+.hero-secondary-text, .header ul li{
     color:#e5e7eb;
 }
+
 .hero-image{
     background-color: grey;
 }
 
-.information{
-    flex-direction:column;
-    align-items: center;
-    background-color: white;
-    width:100%;
+/* Information */
+.information h2{
+    font-size: 36px;
+    font-weight:bolder;
+    color:#1f2937;
 }
+.information{
+    text-align: center;
+    background-color: white;
+}
+
 .gallery{
     display:flex;
     justify-content: center;
@@ -99,19 +97,64 @@ nav ul li{
 .gallery figure{
     display:flex;
     flex-direction:column;
-    height:200px;
-    width:200px;
+    height:150px;
+    width:150px;
     text-align:center;
+    padding:10px;
+    gap: 5px;
 }
 
 .gallery figure div{
-    width:150px;
-    height:150px;
+    width:120px;
+    height:120px;
     align-self: center;
     border:5px solid #3882f6;
     border-radius: 10px;;
 }
 
+/* Testimonials */
+.testimonials{
+    background-color: #E5E7EB;
+    padding:7rem;
+}
+
+.quote{
+    font-size:36px;
+    font-style:italic;
+    font-weight: 200;
+    color:#1f2937;
+}
+
+.attribution{
+    text-align: right;
+    font-weight: bold;
+    padding:10px;
+}
+
+/* Call To Action */
+.call-to-action{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:10px;
+    background-color: #3882f6;
+    margin:5rem 7rem;
+    padding:3rem 6rem;
+    color:white;
+}
+
+.call-to-action-text h2,.call-to-action-text div{
+    margin:0;
+    padding:0;
+}
+
+.call-to-action button{
+    border:2px solid white;
+}
+
+/* Footer */
 footer{
+    color:white;
     text-align:center;
+    padding:2rem 0;
 }
